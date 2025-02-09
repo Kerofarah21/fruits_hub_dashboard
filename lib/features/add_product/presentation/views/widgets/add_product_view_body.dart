@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../../../../../core/widgets/custom_text_form_field.dart';
 import '../../../../../generated/l10n.dart';
+import 'image_field.dart';
 
 class AddProductViewBody extends StatefulWidget {
   const AddProductViewBody({super.key});
@@ -57,6 +58,9 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                 keyboardType: TextInputType.number,
                 controller: productPriceController,
                 textInputAction: TextInputAction.done,
+              ),
+              ImageField(
+                onFileChanged: (image) {},
               ),
             ],
           ),
