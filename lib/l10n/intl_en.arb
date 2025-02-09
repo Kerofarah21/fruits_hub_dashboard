@@ -1,3 +1,9 @@
 {
-    "add_data": "Add Data"
+    "add_data": "Add Data",
+    "add_product": "Add Product",
+    "required_field": "This field is required.",
+    "product_name": "Product Name",
+    "product_description": "Product Description",
+    "product_code": "Product Code",
+    "product_price": "Product Price"
 }

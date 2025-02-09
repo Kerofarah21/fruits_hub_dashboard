@@ -1,3 +1,9 @@
 {
-    "add_data": "إضافة بيانات"
+    "add_data": "إضافة بيانات",
+    "add_product": "إضافة منتج",
+    "required_field": "هذا الحقل مطلوب.",
+    "product_name": "اسم المنتج",
+    "product_description": "وصف المنتج",
+    "product_code": "كود المنتج",
+    "product_price": "سعر المنتج"
 }

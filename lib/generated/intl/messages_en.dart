@@ -22,6 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "add_data": MessageLookupByLibrary.simpleMessage("Add Data")
+        "add_data": MessageLookupByLibrary.simpleMessage("Add Data"),
+        "add_product": MessageLookupByLibrary.simpleMessage("Add Product"),
+        "product_code": MessageLookupByLibrary.simpleMessage("Product Code"),
+        "product_description":
+            MessageLookupByLibrary.simpleMessage("Product Description"),
+        "product_name": MessageLookupByLibrary.simpleMessage("Product Name"),
+        "product_price": MessageLookupByLibrary.simpleMessage("Product Price"),
+        "required_field":
+            MessageLookupByLibrary.simpleMessage("This field is required.")
       };
 }
