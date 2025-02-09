@@ -6,5 +6,6 @@
     "product_description": "Product Description",
     "product_code": "Product Code",
     "product_price": "Product Price",
-    "is_featured_item": "Is Featured Item"
+    "is_featured_item": "Is Featured Item",
+    "select_image": "Please Select an Image"
 }

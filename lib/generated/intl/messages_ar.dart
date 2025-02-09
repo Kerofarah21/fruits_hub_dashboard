@@ -31,6 +31,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "product_name": MessageLookupByLibrary.simpleMessage("اسم المنتج"),
         "product_price": MessageLookupByLibrary.simpleMessage("سعر المنتج"),
         "required_field":
-            MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب.")
+            MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب."),
+        "select_image":
+            MessageLookupByLibrary.simpleMessage("الرجاء اختيار صورة")
       };
 }

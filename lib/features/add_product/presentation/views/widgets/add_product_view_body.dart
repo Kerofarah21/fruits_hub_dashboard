@@ -1,5 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
+import '../../../../../core/helper_functions/build_error_bar.dart';
+import '../../../../../core/widgets/custom_button.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
 import '../../../../../generated/l10n.dart';
 import 'image_field.dart';
@@ -22,6 +26,9 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
   final TextEditingController productPriceController = TextEditingController();
 
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
+
+  bool isFeatured = false;
+  File? image;
 
   @override
   Widget build(BuildContext context) {
@@ -60,10 +67,33 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                 textInputAction: TextInputAction.done,
               ),
               IsFeatured(
-                onChanged: (value) {},
+                onChanged: (value) {
+                  isFeatured = value;
+                },
               ),
               ImageField(
-                onFileChanged: (image) {},
+                onFileChanged: (image) {
+                  this.image = image;
+                },
+              ),
+              CustomButton(
+                text: S.of(context).add_product,
+                onPressed: () {
+                  if (image != null) {
+                    if (_formKey.currentState!.validate()) {
+                      _formKey.currentState!.save();
+                    } else {
+                      setState(() {
+                        autovalidateMode = AutovalidateMode.always;
+                      });
+                    }
+                  } else {
+                    buildSnackBar(
+                      context,
+                      message: S.of(context).select_image,
+                    );
+                  }
+                },
               ),
               const SizedBox(),
             ],

@@ -6,5 +6,6 @@
     "product_description": "وصف المنتج",
     "product_code": "كود المنتج",
     "product_price": "سعر المنتج",
-    "is_featured_item": "منتج مميز"
+    "is_featured_item": "منتج مميز",
+    "select_image": "الرجاء اختيار صورة"
 }
