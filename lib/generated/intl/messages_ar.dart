@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "add_data": MessageLookupByLibrary.simpleMessage("إضافة بيانات"),
         "add_product": MessageLookupByLibrary.simpleMessage("إضافة منتج"),
+        "is_featured_item": MessageLookupByLibrary.simpleMessage("منتج مميز"),
         "product_code": MessageLookupByLibrary.simpleMessage("كود المنتج"),
         "product_description":
             MessageLookupByLibrary.simpleMessage("وصف المنتج"),

@@ -119,6 +119,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Is Featured Item`
+  String get is_featured_item {
+    return Intl.message(
+      'Is Featured Item',
+      name: 'is_featured_item',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

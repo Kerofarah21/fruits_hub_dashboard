@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import '../../../../../core/widgets/custom_text_form_field.dart';
 import '../../../../../generated/l10n.dart';
 import 'image_field.dart';
+import 'is_featured.dart';
 
 class AddProductViewBody extends StatefulWidget {
   const AddProductViewBody({super.key});
@@ -59,9 +59,13 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                 controller: productPriceController,
                 textInputAction: TextInputAction.done,
               ),
+              IsFeatured(
+                onChanged: (value) {},
+              ),
               ImageField(
                 onFileChanged: (image) {},
               ),
+              const SizedBox(),
             ],
           ),
         ),
