@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'core/helper_functions/on_generate_routes.dart';
+import 'core/services/get_it_service.dart';
 import 'core/utils/app_colors.dart';
 import 'features/dashboard/presentation/views/dashboard_view.dart';
 import 'firebase_options.dart';
@@ -13,6 +14,8 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  getItServiceSetup();
 
   runApp(const MyApp());
 }

@@ -1,5 +1,8 @@
+import 'package:dartz/dartz.dart';
+
+import '../../../../../core/errors/failures.dart';
 import '../../entities/product_entity.dart';
 
 abstract class ProductRepo {
-  Future<void> addProduct(ProductEntity productEntity);
+  Future<Either<Failure, void>> addProduct(ProductEntity productEntity);
 }

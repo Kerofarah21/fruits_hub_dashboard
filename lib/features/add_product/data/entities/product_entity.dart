@@ -5,7 +5,7 @@ class ProductEntity {
   final String description;
   final String code;
   final String price;
-  final String? imagePath;
+  String? imagePath;
   final File image;
   final bool isFeatured;
 
