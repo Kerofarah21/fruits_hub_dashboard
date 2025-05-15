@@ -1,11 +1,14 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../core/helper_functions/build_error_bar.dart';
+import '../../../../../core/helper_functions/build_bar.dart';
 import '../../../../../core/widgets/custom_button.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
 import '../../../../../generated/l10n.dart';
+import '../../../data/entities/product_entity.dart';
+import '../../cubits/add_product_cubit/add_product_cubit.dart';
 import 'image_field.dart';
 import 'is_featured.dart';
 
@@ -81,14 +84,22 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                 onPressed: () {
                   if (image != null) {
                     if (_formKey.currentState!.validate()) {
-                      _formKey.currentState!.save();
+                      final productEntity = ProductEntity(
+                        image: image!,
+                        name: productNameController.text,
+                        description: productDescriptionController.text,
+                        code: productCodeController.text,
+                        price: productPriceController.text,
+                        isFeatured: isFeatured,
+                      );
+                      context.read<AddProductCubit>().addProduct(productEntity);
                     } else {
                       setState(() {
                         autovalidateMode = AutovalidateMode.always;
                       });
                     }
                   } else {
-                    buildSnackBar(
+                    buildBar(
                       context,
                       message: S.of(context).select_image,
                     );

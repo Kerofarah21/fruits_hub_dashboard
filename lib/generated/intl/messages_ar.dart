@@ -25,6 +25,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "add_data": MessageLookupByLibrary.simpleMessage("إضافة بيانات"),
         "add_product": MessageLookupByLibrary.simpleMessage("إضافة منتج"),
         "is_featured_item": MessageLookupByLibrary.simpleMessage("منتج مميز"),
+        "product_added_successfully":
+            MessageLookupByLibrary.simpleMessage("تم إضافة المنتج بنجاح"),
         "product_code": MessageLookupByLibrary.simpleMessage("كود المنتج"),
         "product_description":
             MessageLookupByLibrary.simpleMessage("وصف المنتج"),

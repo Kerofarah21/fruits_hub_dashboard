@@ -39,7 +39,6 @@ class ProductModel {
         'code': code,
         'price': price,
         'imagePath': imagePath,
-        'image': image,
         'isFeatured': isFeatured,
       };
 }

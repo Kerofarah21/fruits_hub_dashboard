@@ -26,6 +26,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "add_product": MessageLookupByLibrary.simpleMessage("Add Product"),
         "is_featured_item":
             MessageLookupByLibrary.simpleMessage("Is Featured Item"),
+        "product_added_successfully":
+            MessageLookupByLibrary.simpleMessage("Product added successfully"),
         "product_code": MessageLookupByLibrary.simpleMessage("Product Code"),
         "product_description":
             MessageLookupByLibrary.simpleMessage("Product Description"),
