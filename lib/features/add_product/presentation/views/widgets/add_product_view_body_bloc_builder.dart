@@ -20,6 +20,7 @@ class AddProductViewBodyBlocBuilder extends StatelessWidget {
             message: S.of(context).product_added_successfully,
             color: Colors.green,
           );
+          Navigator.pop(context);
         }
         if (state is AddProductFailure) {
           buildBar(
@@ -27,6 +28,7 @@ class AddProductViewBodyBlocBuilder extends StatelessWidget {
             message: state.errMessage,
             color: Colors.red[900],
           );
+          Navigator.pop(context);
         }
       },
       builder: (context, state) {
