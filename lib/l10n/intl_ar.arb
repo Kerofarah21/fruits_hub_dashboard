@@ -8,5 +8,9 @@
     "product_price": "سعر المنتج",
     "is_featured_item": "منتج مميز",
     "select_image": "الرجاء اختيار صورة",
-    "product_added_successfully": "تم إضافة المنتج بنجاح"
+    "product_added_successfully": "تم إضافة المنتج بنجاح",
+    "expiration_months": "أشهر الإنتهاء",
+    "num_of_calories": "عدد الكالوريات",
+    "unit_amount": "كمية الوحدة",
+    "is_organic_product": "منتج طبيعي"
 }

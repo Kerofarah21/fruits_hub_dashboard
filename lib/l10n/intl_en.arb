@@ -8,5 +8,9 @@
     "product_price": "Product Price",
     "is_featured_item": "Is Featured Item",
     "select_image": "Please Select an Image",
-    "product_added_successfully": "Product added successfully"
+    "product_added_successfully": "Product added successfully",
+    "expiration_months": "Expiration Months",
+    "num_of_calories": "Number of Calories",
+    "unit_amount": "Unit Amount",
+    "is_organic_product": "Is Organic Product"
 }

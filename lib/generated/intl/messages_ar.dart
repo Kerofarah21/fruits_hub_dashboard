@@ -24,7 +24,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "add_data": MessageLookupByLibrary.simpleMessage("إضافة بيانات"),
         "add_product": MessageLookupByLibrary.simpleMessage("إضافة منتج"),
+        "expiration_months":
+            MessageLookupByLibrary.simpleMessage("أشهر الإنتهاء"),
         "is_featured_item": MessageLookupByLibrary.simpleMessage("منتج مميز"),
+        "is_organic_product":
+            MessageLookupByLibrary.simpleMessage("منتج طبيعي"),
+        "num_of_calories":
+            MessageLookupByLibrary.simpleMessage("عدد الكالوريات"),
         "product_added_successfully":
             MessageLookupByLibrary.simpleMessage("تم إضافة المنتج بنجاح"),
         "product_code": MessageLookupByLibrary.simpleMessage("كود المنتج"),
@@ -35,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "required_field":
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب."),
         "select_image":
-            MessageLookupByLibrary.simpleMessage("الرجاء اختيار صورة")
+            MessageLookupByLibrary.simpleMessage("الرجاء اختيار صورة"),
+        "unit_amount": MessageLookupByLibrary.simpleMessage("كمية الوحدة")
       };
 }

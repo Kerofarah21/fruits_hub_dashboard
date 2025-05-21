@@ -24,8 +24,14 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "add_data": MessageLookupByLibrary.simpleMessage("Add Data"),
         "add_product": MessageLookupByLibrary.simpleMessage("Add Product"),
+        "expiration_months":
+            MessageLookupByLibrary.simpleMessage("Expiration Months"),
         "is_featured_item":
             MessageLookupByLibrary.simpleMessage("Is Featured Item"),
+        "is_organic_product":
+            MessageLookupByLibrary.simpleMessage("Is Organic Product"),
+        "num_of_calories":
+            MessageLookupByLibrary.simpleMessage("Number of Calories"),
         "product_added_successfully":
             MessageLookupByLibrary.simpleMessage("Product added successfully"),
         "product_code": MessageLookupByLibrary.simpleMessage("Product Code"),
@@ -36,6 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "required_field":
             MessageLookupByLibrary.simpleMessage("This field is required."),
         "select_image":
-            MessageLookupByLibrary.simpleMessage("Please Select an Image")
+            MessageLookupByLibrary.simpleMessage("Please Select an Image"),
+        "unit_amount": MessageLookupByLibrary.simpleMessage("Unit Amount")
       };
 }

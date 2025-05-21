@@ -11,6 +11,7 @@ import '../../../data/entities/product_entity.dart';
 import '../../cubits/add_product_cubit/add_product_cubit.dart';
 import 'image_field.dart';
 import 'is_featured.dart';
+import 'is_organic.dart';
 
 class AddProductViewBody extends StatefulWidget {
   const AddProductViewBody({super.key});
@@ -27,10 +28,15 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
       TextEditingController();
   final TextEditingController productCodeController = TextEditingController();
   final TextEditingController productPriceController = TextEditingController();
+  final TextEditingController expirationMonthsController =
+      TextEditingController();
+  final TextEditingController numOfCaloriesController = TextEditingController();
+  final TextEditingController unitAmountController = TextEditingController();
 
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
 
   bool isFeatured = false;
+  bool isOrganic = false;
   File? image;
 
   @override
@@ -67,11 +73,34 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                 hint: S.of(context).product_price,
                 keyboardType: TextInputType.number,
                 controller: productPriceController,
+                textInputAction: TextInputAction.next,
+              ),
+              CustomTextFormField(
+                hint: S.of(context).expiration_months,
+                keyboardType: TextInputType.number,
+                controller: expirationMonthsController,
+                textInputAction: TextInputAction.next,
+              ),
+              CustomTextFormField(
+                hint: S.of(context).num_of_calories,
+                keyboardType: TextInputType.number,
+                controller: numOfCaloriesController,
+                textInputAction: TextInputAction.next,
+              ),
+              CustomTextFormField(
+                hint: S.of(context).unit_amount,
+                keyboardType: TextInputType.number,
+                controller: unitAmountController,
                 textInputAction: TextInputAction.done,
               ),
               IsFeatured(
                 onChanged: (value) {
                   isFeatured = value;
+                },
+              ),
+              IsOrganic(
+                onChanged: (value) {
+                  isOrganic = value;
                 },
               ),
               ImageField(
@@ -91,6 +120,12 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                         code: productCodeController.text,
                         price: productPriceController.text,
                         isFeatured: isFeatured,
+                        expirationMonths:
+                            int.parse(expirationMonthsController.text),
+                        numOfCalories: int.parse(numOfCaloriesController.text),
+                        unitAmount: int.parse(unitAmountController.text),
+                        isOrganic: isOrganic,
+                        reviews: [],
                       );
                       context.read<AddProductCubit>().addProduct(productEntity);
                     } else {

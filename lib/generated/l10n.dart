@@ -149,6 +149,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Expiration Months`
+  String get expiration_months {
+    return Intl.message(
+      'Expiration Months',
+      name: 'expiration_months',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Number of Calories`
+  String get num_of_calories {
+    return Intl.message(
+      'Number of Calories',
+      name: 'num_of_calories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unit Amount`
+  String get unit_amount {
+    return Intl.message(
+      'Unit Amount',
+      name: 'unit_amount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Is Organic Product`
+  String get is_organic_product {
+    return Intl.message(
+      'Is Organic Product',
+      name: 'is_organic_product',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
